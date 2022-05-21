@@ -236,7 +236,13 @@ body {
   font-size: 64px;
   line-height: 74px;
   color: #1f3f68;
-  font-family: Galien;
+  font-family: "Galien";
 }
 
+.intro__paragraf {
+  max-width: 425px;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Gilroy";
+}
 /* Intro styles end */
