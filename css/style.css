@@ -1,3 +1,43 @@
+/* Gilroy Regular */
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Regular"), local("Gilroy-Regular"),
+    url("../fonts/Gilroy/Gilroy-Regular.woff2") format("woff2"),
+    url("../fonts/Gilroy/Gilroy-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Gilroy Semibold */
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Semibold"), local("Gilroy-Semibold"),
+    url("../fonts/Gilroy/Gilroy-Semibold.woff2") format("woff2"),
+    url("../fonts/Gilroy/Gilroy-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+/* Gilroy Medium */
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Medium"), local("Gilroy-Medium"),
+    url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2"),
+    url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Galien";
+  src: local("Galien-Bold"), local("Galien-Bold"),
+    url("../fonts/Galien/Galien-Bold.ttf") format("ttf"),
+    url("../fonts/Galien/Galien-Bold.otf") format("otf");
+  font-weight: 500;
+  font-style: normal;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -128,47 +168,6 @@ table {
   border-spacing: 0;
 }
 
-/* Gilroy Regular */
-
-@font-face {
-  font-family: "Gilroy";
-  src: local("Gilroy Regular"), local("Gilroy-Regular"),
-    url("Gilroy-Regular.woff2") format("woff2"),
-    url("Gilroy-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Gilroy Semibold */
-
-@font-face {
-  font-family: "Gilroy";
-  src: local("Gilroy Semibold"), local("Gilroy-Semibold"),
-    url("Gilroy-Semibold.woff2") format("woff2"),
-    url("Gilroy-Semibold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-/* Gilroy Medium */
-
-@font-face {
-  font-family: "Gilroy";
-  src: local("Gilroy Medium"), local("Gilroy-Medium"),
-    url("Gilroy-Medium.woff2") format("woff2"),
-    url("Gilroy-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Galien";
-  src: local("Galien Regular"), local("Galien Regular"),
-    url("Galien Regular.woff2") format("woff2"),
-    url("Galien Regular.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -178,99 +177,81 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  font-family: Gilroy;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: normal;
-  color: #1f3f68;
-}
-
 .wrapper {
-  max-width: 940px;
+  max-width: 1366px;
   margin: 0 auto;
 }
-
-/* Header styles start */
-
-.wrapper__header {
+/* Header Style Start */
+.header__wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
   justify-content: space-between;
   max-width: 1200px;
-  padding: 83px top 40px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
 }
 
-.header {
-  background-color: white;
+.menu__burger {
+  width: 24px;
+  height: 16px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.menu__burger span {
+  width: 24px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #356ead;
+  transition: all 0.5s;
+}
+
+.menu__burger span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+
+.menu__burger span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+
+.menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: #ffefba;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
 }
-
-.header__nav {
-  display: flex;
-  flex-wrap: wrap;
-  background: none;
-  box-shadow: none;
-  padding-bottom: 16px;
+.menu.active {
+  transform: translateX(0);
 }
-
-/* Header styles end */
-
-/* Intro styles start */
-
-.intro {
-  background: white;
-  height: 100vh;
-  padding-left: 212px;
-  padding-top: 189px;
-  width: 100%;
+.menu li {
+  list-style-type: none;
 }
+/* Header Style end */
+
+/* Intro Styles Start */
 
 .intro__title {
-  max-width: 510px;
+  font-family: "Galien";
   font-size: 64px;
   line-height: 74px;
+  letter-spacing: 0.04em;
   color: #1f3f68;
-  font-family: "Galien";
-  margin-bottom: 22px;
+  max-width: 510px;
+  padding-top: 189px;
+  margin-bottom: 32px;
 }
 
-.intro__paragraf {
-  max-width: 425px;
-  font-family: "Gilroy";
-  font-size: 16px;
-  line-height: 26px;
-  margin-bottom: 71px;
-}
-
-.intro__button{
-  padding: 15px 48px;
-  max-width: 220px;
-  background: #5A98D0;
-  box-shadow: 5px 10px 20px 
-  rgba(53, 110, 173, 0.2);
-  border-radius: 10px;
-  border: 0;
-  color: white;
-  font-family: 'Gilroy';
-  font-size: 16px;
-  line-height: 26px;  
-}
-
-.intro__button:hover, .intro__button:focus, .intro__button:active{
-  background: #4b8dc9;
-}
-
-.intro__img{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  position: absolute;
-}
-
-/* Intro styles end
+/* Intro Styles End */
