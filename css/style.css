@@ -3,7 +3,8 @@
 @font-face {
   font-family: "Gilroy";
   src: local("Gilroy Regular"), local("Gilroy-Regular"),
-    url("../fonts/Gilroy/Gilroy-Regular.woff2") format("woff2"),
+    url("../fonts/Gilroy/Gilroy-Regular.eot") format("eot"),
+    url("../fonts/Gilroy/Gilroy-Regular.ttf") format("ttf"),
     url("../fonts/Gilroy/Gilroy-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -14,8 +15,9 @@
 @font-face {
   font-family: "Gilroy";
   src: local("Gilroy Semibold"), local("Gilroy-Semibold"),
-    url("../fonts/Gilroy/Gilroy-Semibold.woff2") format("woff2"),
-    url("../fonts/Gilroy/Gilroy-Semibold.woff") format("woff");
+    url("../fonts/Gilroy/Gilroy-Semibold.eot") format("eot"),
+    url("../fonts/Gilroy/Gilroy-Semibold.woff") format("woff"),
+    url("../fonts/Gilroy/Gilroy-Semibold.ttf") format("ttf");
   font-weight: 600;
   font-style: normal;
 }
@@ -24,8 +26,9 @@
 @font-face {
   font-family: "Gilroy";
   src: local("Gilroy Medium"), local("Gilroy-Medium"),
-    url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2"),
-    url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff");
+    url("../fonts/Gilroy/Gilroy-Medium.eot") format("eot"),
+    url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff"),
+    url("../fonts/Gilroy/Gilroy-Medium.ttf") format("ttf");
   font-weight: 500;
   font-style: normal;
 }
@@ -243,6 +246,12 @@ html {
 
 /* Intro Styles Start */
 
+.intro{
+  height: 100vh;
+  background: url(../img/background_main.jpg) no-repeat center; 
+  background-size: cover;
+}
+
 .intro__title {
   font-family: "Galien";
   font-size: 64px;
@@ -254,4 +263,32 @@ html {
   margin-bottom: 32px;
 }
 
+.intro__subtitle{
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #1F3F68;
+  max-width: 425px;
+  margin-bottom: 71px;
+}
+
+.intro__btn{
+  padding: 15px 48px;
+  width: 220px;
+  background: #5A98D0;
+  box-shadow: 5px 10px 20px 
+  rgba(53, 110, 173, 0.2);
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  font-family: 'Gilroy';
+  font-size: 16px;
+  line-height: 26px;  
+}
+
+.illustration__bg{
+  float: right;
+  padding-top: 72.4px;
+}
 /* Intro Styles End */
