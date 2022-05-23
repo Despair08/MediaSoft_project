@@ -246,10 +246,18 @@ html {
 
 /* Intro Styles Start */
 
-.intro{
-  height: 100vh;
-  background: url(../img/background_main.jpg) no-repeat center; 
+.intro {
   background-size: cover;
+  background-image: linear-gradient(
+    0deg,
+    #98c3e8 8.84%,
+    rgba(152, 195, 232, 0) 31.12%
+  );
+}
+
+.wrapper__intro {
+  max-width: 1154px;
+  margin: 0 auto;
 }
 
 .intro__title {
@@ -263,31 +271,35 @@ html {
   margin-bottom: 32px;
 }
 
-.intro__subtitle{
+.intro__subtitle {
   font-family: "Gilroy";
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.05em;
-  color: #1F3F68;
+  color: #1f3f68;
   max-width: 425px;
   margin-bottom: 71px;
 }
 
-.intro__btn{
+.intro__btn {
   padding: 15px 48px;
   width: 220px;
-  background: #5A98D0;
-  box-shadow: 5px 10px 20px 
-  rgba(53, 110, 173, 0.2);
+  background: #5a98d0;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
   border-radius: 10px;
   border: 0;
   color: white;
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   font-size: 16px;
-  line-height: 26px;  
+  line-height: 26px;
+  margin-bottom: 190px;
 }
 
-.illustration__bg{
+.form__wrapper {
+  max-width: 220px;
+}
+
+.bg__img {
   float: right;
   padding-top: 72.4px;
 }
